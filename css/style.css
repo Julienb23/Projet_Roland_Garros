@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css?family=Francois+One|Open+Sans&display=swap');
+@font-face {
+  font-family: 'Roland';
+  src: url('../assets/fonts/rg.woff2');
+}
+
+.container-fluid,
+.container-sm,
+.container-md,
+.container-lg,
+.container-xl {
+  padding: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+nav {
+  font-family: 'Francois One', sans-serif;
+}
+
+nav {
+  text-transform: uppercase;
+}
+
+#main-container {
+  padding: 20px 0px;
+}
+
+h1 {
+  line-height: 2;
+  margin: 5px 0px;
+  text-decoration: underline;
+  text-decoration-color: #c85a19;
+}
+
+#main-logo {
+  height: 50px;
+}
+
+#footer-logo {
+  height: 100px;
+}
+
+#footer-macademia {
+  height: 30px;
+}
+
+@media (min-width: 992px) {
+  .footer-social {
+    height: 60px;
+  }
+}
+
+@media (max-width: 992px) {
+  .footer-social {
+    height: 40px;
+  }
+}
+
+#carousel-home img {
+  height: 400px;
+  object-fit: cover;
+  object-position: 50% 30%;
+}
+
+.carousel-caption {
+  text-shadow: 1px 1px 2px #111;
+}
+
+.main-page-options-cards {
+  padding: 15px;
+}
+
+.main-page-options-img {
+  height: 230px;
+  object-fit: cover;
+}
+
+footer {
+  background: #00503c;
+  border-bottom: 15px solid #003729;
+  padding-top: 10px;
+  color: #ffffff;
+  text-align: center;
+}
+
+#wrap-footer {
+  padding: 20px;
+}
+
+@media (min-width: 768px) {
+  .col-footer:not(:last-child) {
+    border-right: 1px solid #003729;
+  }
+}
+
+@media (max-width: 768px) {
+  .col-footer {
+    padding: 10px;
+  }
+
+  .col-footer:not(:last-child) {
+    border-bottom: 1px solid #003729;
+  }
+}
+
+.error {
+  font-size: 0.8rem;
+  text-align: right;
+  color: rgb(246, 109, 109);
+  margin-top: 5px;
+}
+
+#display-hour {
+  margin: 0;
+  font-size: 1.2rem;
+  float: left;
+}
+
+.button-action {
+    margin-left: 15px;
+}
+
+.div-loading {
+  text-align: center;
+  margin: 50px auto;
+}
+
+.div-loading .spinner-border {
+  width: 5rem;
+  height: 5rem;
+}
+
+#container-content {
+  margin-top: 40px;
+}
+
+#container-content h3 {
+  text-align: center;
+  margin-bottom: 30px;
+}

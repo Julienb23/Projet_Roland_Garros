@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Planifier des matchs - Roland-Garros</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../css/bootstrap.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../css/style.css'>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="../js/bootstrap.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+
+        <!-- Menu principal -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="index.html"><img id="main-logo" src="../assets/img/logo.png"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.html">Accueil <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Actions rapides
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="joueurs.html">Ajouter des joueurs</a>
+                                <a class="dropdown-item" href="arbitres.html">Ajouter des arbitres</a>
+                                <a class="dropdown-item" href="courts.html">Ajouter des courts</a>
+                                <a class="dropdown-item" href="matchs.html">Planifier des matchs</a>
+                                <a class="dropdown-item" href="resultats.html">Enregistrer les résultats des matchs</a>
+                                <a class="dropdown-item" href="meilleur-joueur.html">Voir le meilleur joueur actuel</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" tabindex="-1">Contact</a>
+                        </li>
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                        <a class="btn btn-outline-danger my-2 my-sm-0" href="deconnexion.html" type="button">Se déconnecter</a>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Corps de la page -->
+        <div id="main-container" class="container">
+            <div class="row">
+                <div class="col-12 col-lg-8">
+                    <div class="container">
+                        <!-- Titre -->
+                        <div class="row">
+                            <div class="col-12">
+                                <h1>Planifier des matchs</h1>
+                            </div>
+                        </div>
+                        <!-- Formulaire -->
+                        <div class="row">
+                            <div class="col-12">
+                                <form> 
+                                    <div class="form-group">
+                                        <label for="tournoi-match-form">Tournoi</label>
+                                        <select class="form-control" id="tournoi-match-form" name="tournoi">
+                                            <option selected disabled>-- Sélectionner --</option>
+                                            <option value="messieurs">Simple messieurs</option>
+                                            <option value="dames">Simple dames</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="joueur1-match-form">Joueur 1</label>
+                                        <select class="form-control" id="joueur1-match-form" name="joueur1">
+                                            <option selected disabled>-- Sélectionner --</option>
+                                            <option value="federer">Roger Federer</option>
+                                            <option value="nadal">Rafael Nadal</option>
+                                            <option value="djokovic">Novak Djokovic</option>
+                                            <option value="barty">Ashleigh Barty</option>
+                                            <option value="williams">Serena Williams</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="joueur2-match-form">Joueur 2</label>
+                                        <select class="form-control" id="joueur2-match-form" name="joueur2">
+                                            <option selected disabled>-- Sélectionner --</option>
+                                            <option value="federer">Roger Federer</option>
+                                            <option value="nadal">Rafael Nadal</option>
+                                            <option value="djokovic">Novak Djokovic</option>
+                                            <option value="barty">Ashleigh Barty</option>
+                                            <option value="williams">Serena Williams</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="arbitre-match-form">Arbitre</label>
+                                        <select class="form-control" id="arbitre-match-form" name="arbitre">
+                                            <option selected disabled>-- Sélectionner --</option>
+                                            <option value="bernardes">Carlos Bernardes</option>
+                                            <option value="veljovic">Marijana Veljović</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="court-match-form">Court</label>
+                                        <select class="form-control" id="court-match-form" name="court">
+                                            <option selected disabled>-- Sélectionner --</option>
+                                            <option value="chatrier">Court Philippe-Chatrier</option>
+                                            <option value="lenglen">Court Suzanne-Lenglen</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="date-joueur-form">Date du match</label>
+                                        <input type="date" class="form-control" id="nom-joueur-form" name="nom">
+                                    </div>
+                                    <div class="form-group">
+                                        <button type="submit" class="btn-lg btn-success" id="btn-ajouter-joueur">Planifier le match</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <aside>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="list-group">
+                                        <a href="#" class="list-group-item list-group-item-action active">
+                                          Matchs déjà planifiés
+                                        </a>
+                                        <a href="#" class="list-group-item list-group-item-action">
+                                            <b>Novak Djokovic</b> vs <b>Rafael Nadal</b><br>
+                                            Simple messieurs<br>
+                                            Arbitre : Carlos Bernardes<br>
+                                            Court Philippe-Chatrier<br>
+                                            2 juin 2020
+                                        </a>
+                                      </div>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div id="wrap-footer">
+                            <div class="row">
+                                <div class="col-12 col-md-4 col-footer">
+                                    <img id="footer-logo" src="../assets/img/logo.png">
+                                </div>
+                                <div class="col-12 col-md-4 col-footer">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <h6>Retrouvez-nous sur les réseaux sociaux !</h6>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <a href="https://www.facebook.com/MacademiaFrance" target="_blank">
+                                                <img class="footer-social" src="../assets/img/fb.png">
+                                            </a>
+                                        </div>
+                                        <div class="col-3">
+                                            <a href="https://www.twitter.com/MacademiaFrance" target="_blank">
+                                                <img class="footer-social" src="../assets/img/twit.png">
+                                            </a>
+                                        </div>
+                                        <div class="col-3">
+                                            <a href="https://www.instagram.com/MacademiaFrance" target="_blank">
+                                                <img class="footer-social" src="../assets/img/insta.png">
+                                            </a>
+                                        </div>
+                                        <div class="col-3">
+                                            <a href="https://www.linkedin.com/company/MacademiaFrance" target="_blank">
+                                                <img class="footer-social" src="../assets/img/lin.png">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-4 col-footer">
+                                    <img id="footer-macademia" src="../assets/img/macademia.png">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    </footer>
+</body>
+
+</html>
